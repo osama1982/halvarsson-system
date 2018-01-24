@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+<h1 th:text="${title}"></h1>
+<nav th:replace="fragments :: navigation"></nav>
+<br/>
+<p th:unless="${menu} and ${menu.size()}" >Menu Unavailable</p>
+<table class="table">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Size</th>
+</tr>
+<tr th:each="item : ${menu}">
+<td th:text="${item.id}"></td>
+<td th:text="${item.name}"></td>
+<td th:text="${item.desc}"></td>
+<td th:text="${item.price}"></td>
+<td th:text="${item.itemSize.name}"></td>
+</tr>
+</table>
+</body>
+</html>
