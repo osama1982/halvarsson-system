@@ -1,5 +1,6 @@
 package com.halvarsson.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,18 +16,23 @@ public class Items {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="mc_id")
 	private int id;
 	
 	@NotNull
 	@Size(min = 3, max= 30, message = "Must be 3 characters at least")
+	@Column(name="mc_name")
 	private String name;
 	
+	@Column(name="mc_desc")
 	private String desc;
 	
 	@NotNull
 	@Min(value = 0, message = "Price cannont be lower than zero")
+	@Column(name="mc_price")
 	private double price;
 	
+	@Column(name="mc_itemSize")
 	private ItemSizes itemSize;
 	
 	public ItemSizes getItemSize() {
@@ -39,10 +45,11 @@ public class Items {
 
 	public Items() {}
 	
-	public Items(String name, String desc, double price) {
+	public Items(String name, String desc, ItemSizes itemSize, double price) {
 		this.name = name;
 		this.desc = desc;
 		this.price = price;
+		this.itemSize = itemSize;
 	}
 	
 	public int getId() {
