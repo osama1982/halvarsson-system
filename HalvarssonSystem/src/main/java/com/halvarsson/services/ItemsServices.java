@@ -1,4 +1,4 @@
-package com.halvarsson.services;
+/*package com.halvarsson.services;
 
 import java.util.ArrayList;
 
@@ -39,3 +39,4 @@ public class ItemsServices {
 	}
 	
 }
+*/
