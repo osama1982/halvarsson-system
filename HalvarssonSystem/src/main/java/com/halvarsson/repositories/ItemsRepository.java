@@ -1,5 +1,5 @@
 package com.halvarsson.repositories;
 
-public class ItemsRepository {
+public interface ItemsRepository {
 
 }

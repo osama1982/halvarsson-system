@@ -1,15 +1,20 @@
 package com.halvarsson.models;
 
 import javax.persistence.Entity;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table(name="maincourses")
 public class Items {
 	
-	private static int nextId = 1;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	@NotNull
@@ -32,13 +37,9 @@ public class Items {
 		this.itemSize = itemSize;
 	}
 
-	public Items() {
-		id = nextId;
-		nextId++;
-	}
+	public Items() {}
 	
 	public Items(String name, String desc, double price) {
-		this();
 		this.name = name;
 		this.desc = desc;
 		this.price = price;
@@ -46,9 +47,6 @@ public class Items {
 	
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -67,6 +65,12 @@ public class Items {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public String toString() {
+		return String.format("Item: [id=%d, Name='%s', Description='%s' , Size='%s' , Price='%d']", 
+				id, name, desc, itemSize, price);
+		
 	}
 
 }
