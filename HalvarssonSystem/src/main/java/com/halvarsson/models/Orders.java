@@ -1,85 +1,80 @@
 package com.halvarsson.models;
 
+import java.util.Date;
+
 public class Orders {
+
+	private int id;
+	private Tables table;
+	private Meals mainCourse;
+	private Meals sideDish;
+	private Meals dessert;
+	private Meals drink;
+	private String notes;
+	private double totalPrice;
+	private boolean ordIsDoneStatus;
+	private Date ordTimeStamp;
 	
-	private int ordId;
-	private int tableId;
-	private Items mainCourse;
-	private int mainCourseQty;
-	private Items sideDish;
-	private int sideDishQty;
-	private Items dessert;
-	private int dessertQty;
-	private Items drink;
-	private int drinkQty;
-	private boolean ordStatus;
-	//private Date ordTime;
-	// private double ordTotalPrice
-	public int getOrdId() {
-		return ordId;
+	
+	public int getId() {
+		return id;
 	}
-	public void setOrdId(int ordId) {
-		this.ordId = ordId;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public int getTableId() {
-		return tableId;
+	public Tables getTable() {
+		return table;
 	}
-	public void setTableId(int tableId) {
-		this.tableId = tableId;
+	public void setTable(Tables table) {
+		this.table = table;
 	}
-	public Items getMainCourse() {
+	public Meals getMainCourse() {
 		return mainCourse;
 	}
-	public void setMainCourse(Items mainCourse) {
+	public void setMainCourse(Meals mainCourse) {
 		this.mainCourse = mainCourse;
 	}
-	public int getMainCourseQty() {
-		return mainCourseQty;
-	}
-	public void setMainCourseQty(int mainCourseQty) {
-		this.mainCourseQty = mainCourseQty;
-	}
-	public Items getSideDish() {
+	public Meals getSideDish() {
 		return sideDish;
 	}
-	public void setSideDish(Items sideDish) {
+	public void setSideDish(Meals sideDish) {
 		this.sideDish = sideDish;
 	}
-	public int getSideDishQty() {
-		return sideDishQty;
-	}
-	public void setSideDishQty(int sideDishQty) {
-		this.sideDishQty = sideDishQty;
-	}
-	public Items getDessert() {
+	public Meals getDessert() {
 		return dessert;
 	}
-	public void setDessert(Items dessert) {
+	public void setDessert(Meals dessert) {
 		this.dessert = dessert;
 	}
-	public int getDessertQty() {
-		return dessertQty;
-	}
-	public void setDessertQty(int dessertQty) {
-		this.dessertQty = dessertQty;
-	}
-	public Items getDrink() {
+	public Meals getDrink() {
 		return drink;
 	}
-	public void setDrink(Items drink) {
+	public void setDrink(Meals drink) {
 		this.drink = drink;
 	}
-	public int getDrinkQty() {
-		return drinkQty;
+	public String getNotes() {
+		return notes;
 	}
-	public void setDrinkQty(int drinkQty) {
-		this.drinkQty = drinkQty;
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
-	public boolean isOrdStatus() {
-		return ordStatus;
+	public double getTotalPrice() {
+		return totalPrice;
 	}
-	public void setOrdStatus(boolean ordStatus) {
-		this.ordStatus = ordStatus;
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	public boolean isOrdIsDoneStatus() {
+		return ordIsDoneStatus;
+	}
+	public void setOrdIsDoneStatus(boolean ordIsDoneStatus) {
+		this.ordIsDoneStatus = ordIsDoneStatus;
+	}
+	public Date getOrdTimeStamp() {
+		return ordTimeStamp;
+	}
+	public void setOrdTimeStamp(Date ordTimeStamp) {
+		this.ordTimeStamp = ordTimeStamp;
 	}
 	
 

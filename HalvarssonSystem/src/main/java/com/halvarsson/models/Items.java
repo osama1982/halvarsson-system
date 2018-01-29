@@ -32,24 +32,13 @@ public class Items {
 	@Column(name="mc_price")
 	private double price;
 	
-	@Column(name="mc_itemSize")
-	private ItemSizes itemSize;
-	
-	public ItemSizes getItemSize() {
-		return itemSize;
-	}
-
-	public void setItemSize(ItemSizes itemSize) {
-		this.itemSize = itemSize;
-	}
-
 	public Items() {}
 	
 	public Items(String name, String desc, ItemSizes itemSize, double price) {
 		this.name = name;
 		this.desc = desc;
 		this.price = price;
-		this.itemSize = itemSize;
+		//this.itemSize = itemSize;
 	}
 	
 	public int getId() {
@@ -75,9 +64,20 @@ public class Items {
 	}
 	
 	public String toString() {
-		return String.format("Item: [id=%d, Name='%s', Description='%s' , Size='%s' , Price='%d']", 
-				id, name, desc, itemSize, price);
+		return String.format("Item: [id=%d, Name='%s', Description='%s' , Price='%d']", 
+				id, name, desc, price);
 		
 	}
+	
+//	@Column(name="mc_itemSize")
+//	private ItemSizes itemSize;
+//	
+//	public ItemSizes getItemSize() {
+//		return itemSize;
+//	}
+//
+//	public void setItemSize(ItemSizes itemSize) {
+//		this.itemSize = itemSize;
+//	}
 
 }

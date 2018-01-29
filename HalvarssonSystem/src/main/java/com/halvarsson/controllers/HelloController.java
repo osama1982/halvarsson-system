@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.halvarsson.models.ItemSizes;
 import com.halvarsson.models.Items;
 import com.halvarsson.repositories.ItemsRepository;
-import com.halvarsson.services.ItemsServices;
+//import com.halvarsson.services.ItemsServices;
 
 @Controller
 public class HelloController {
