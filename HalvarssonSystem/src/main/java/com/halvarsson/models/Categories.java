@@ -14,16 +14,16 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="categories")
+//@Table(name="categories")
 public class Categories {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="catId")
+	//@Column(name="catId")
 	private int catId;
 	
 	@NotNull
-	@Column(name="catName")
+	//@Column(name="catName")
 	private String catName;
 	
 	@OneToMany

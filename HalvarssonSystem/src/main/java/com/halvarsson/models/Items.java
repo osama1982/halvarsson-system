@@ -12,26 +12,26 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="items")
+//@Table(name="items")
 public class Items {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="itemId")
+	//@Column(name="itemId")
 	private int id;
 	
 	@NotNull
 	@Size(min = 3, max= 30, message = "Must be 3 characters at least")
-	@Column(name="itemName")
+	//@Column(name="itemName")
 	private String name;
 	
-	@Column(name="itemDesc")
+	//@Column(name="itemDesc")
 	private String desc;
 	
 	
 	@NotNull
 	@Min(value = 0, message = "Price cannont be lower than zero")
-	@Column(name="itemPrice")
+	//@Column(name="itemPrice")
 	private double price;
 	
 	
