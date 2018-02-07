@@ -33,7 +33,6 @@ public class Categories {
 	public Categories() {}
 
 	public Categories(String catName) {
-		super();
 		this.catName = catName;
 	}
 	public int getCatId() {
