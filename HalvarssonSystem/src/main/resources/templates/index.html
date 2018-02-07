@@ -13,13 +13,14 @@
 <th>Description</th>
 <th>Price</th>
 <th>Size</th>
+<th>Category</th>
 </tr>
 <tr th:each="item : ${menu}">
 <td th:text="${item.id}"></td>
 <td th:text="${item.name}"></td>
 <td th:text="${item.desc}"></td>
 <td th:text="${item.price}"></td>
-<td th:text="${item.itemSize.name}"></td>
+<td th:text="${item.category}"></td>
 </tr>
 </table>
 </body>
