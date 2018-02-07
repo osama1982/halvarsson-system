@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -27,12 +28,15 @@ public class Items {
 	@Column(name="mc_desc")
 	private String desc;
 	
-	private Categories category;
 	
 	@NotNull
 	@Min(value = 0, message = "Price cannont be lower than zero")
 	@Column(name="mc_price")
 	private double price;
+	
+	@ManyToOne
+	@Column(name="category_id")
+	private Categories category;
 	
 	public Items() {}
 	
