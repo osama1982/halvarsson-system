@@ -27,6 +27,8 @@ public class Items {
 	@Column(name="mc_desc")
 	private String desc;
 	
+	private Categories category;
+	
 	@NotNull
 	@Min(value = 0, message = "Price cannont be lower than zero")
 	@Column(name="mc_price")
@@ -61,6 +63,14 @@ public class Items {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public Categories getCategory() {
+		return category;
+	}
+
+	public void setCategory(Categories category) {
+		this.category = category;
 	}
 	
 	public String toString() {

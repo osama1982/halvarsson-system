@@ -12,7 +12,7 @@ public class Orders {
 	private Meals drink;
 	private String notes;
 	private double totalPrice;
-	private boolean ordIsDoneStatus;
+	private boolean activeStatus;
 	private Date ordTimeStamp;
 	
 	
@@ -64,11 +64,11 @@ public class Orders {
 	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	public boolean isOrdIsDoneStatus() {
-		return ordIsDoneStatus;
+	public boolean isActiveStatus() {
+		return activeStatus;
 	}
-	public void setOrdIsDoneStatus(boolean ordIsDoneStatus) {
-		this.ordIsDoneStatus = ordIsDoneStatus;
+	public void setActiveStatus(boolean activeStatus) {
+		this.activeStatus = activeStatus;
 	}
 	public Date getOrdTimeStamp() {
 		return ordTimeStamp;

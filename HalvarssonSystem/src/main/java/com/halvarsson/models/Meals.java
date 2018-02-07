@@ -2,10 +2,18 @@ package com.halvarsson.models;
 
 public class Meals {
 	
+	private int id;
 	private Items item;
 	private ItemSizes size;
 	private int quantity;
 	private double price;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	public Items getItem() {
 		return item;
