@@ -10,9 +10,8 @@ import com.halvarsson.models.Items;
 @Repository
 public interface ItemsRepository extends CrudRepository<Items, Integer> {
 	
-	public List<Items> findAll();
+/*	public List<Items> findAll();
 	
-	public Items findById(Integer id);
+	public Items findById(Integer id);*/
 	
-
 }
