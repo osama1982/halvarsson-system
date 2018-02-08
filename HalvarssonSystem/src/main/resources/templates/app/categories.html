@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+<h1 th:text="${title}"></h1>
+<nav th:replace="fragments :: navigation"></nav>
+<br/>
+<p th:unless="${menu} and ${menu.size()}" >Menu Unavailable</p>
+<table class="table">
+<tr>
+<th>ID</th>
+<th>Category</th>
+</tr>
+<tr th:each="item : ${menu}">
+<td th:text="${item.id}"></td>
+<td th:text="${item.name}"></td>
+<td th:text="${item.desc}"></td>
+<td th:text="${item.price}"></td>
+<td th:text="${item.category}"></td>
+</tr>
+</table>
 </body>
 </html>

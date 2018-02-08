@@ -84,8 +84,8 @@ public class Items {
 	}
 	
 	public String toString() {
-		return String.format("Item: [id=%d, Name='%s', Description='%s' , Price='%d']", 
-				id, name, desc, price);
+		return String.format("Item: [id=%d, Name='%s', Description='%s' , Price='%d' , cat_id=%d]", 
+				id, name, desc, price, category);
 		
 	}
 	

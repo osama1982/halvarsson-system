@@ -16,11 +16,11 @@ import com.halvarsson.models.Items;
 import com.halvarsson.repositories.ItemsRepository;
 //import com.halvarsson.services.ItemsServices;
 
-@Controller
+//@Controller
 public class HelloController {
 	
-	@Autowired
-	private ItemsRepository itemRepository;
+	//@Autowired
+	//private ItemsRepository itemRepository;
 	/*	
 	@RequestMapping("/")
 	public String index(Model model) {
@@ -29,14 +29,14 @@ public class HelloController {
 		//model.addAttribute("menu", ItemsServices.getAllItems());
 		return "index";
 	}*/
-	@RequestMapping(value = "/start/add", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/start/add", method = RequestMethod.GET)
 	public String displayOrdersMenu(Model model) {
 		
 		model.addAttribute("title", "Add Customer Order");
 		model.addAttribute(new Items());
 		model.addAttribute("arrayItemSizes", ItemSizes.values());
 		return "start/add";
-	}
+	}*/
 	
 /*	The Old way to get parameters from post method
   	@RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -46,7 +46,7 @@ public class HelloController {
 		
 	}*/
 	
-	@RequestMapping(value = "/start/add", method = RequestMethod.POST)
+/*	@RequestMapping(value = "/start/add", method = RequestMethod.POST)
 	public String processMenuOrders(@ModelAttribute @Valid Items newItem, Errors error, Model model) {
 		
 		if(error.hasErrors()) {
@@ -57,17 +57,17 @@ public class HelloController {
 		//ItemsServices.addItem(newItem);
 		itemRepository.save(newItem);
 		return "redirect:/"; //redirects to the "/" view
-	}
+	}*/
 	
-	@RequestMapping(value = "/start/remove", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/start/remove", method = RequestMethod.GET)
 	public String displayRemoveItemForm(Model model) {
 		model.addAttribute("title", "Remove Cheese");
 		model.addAttribute("itemsArray", itemRepository.findAll());
 		//model.addAttribute("itemsArray", ItemsServices.getAllItems());
 		return "start/remove";
 	}
-	
-	@RequestMapping(value = "/start/remove", method = RequestMethod.POST)
+	*/
+/*	@RequestMapping(value = "/start/remove", method = RequestMethod.POST)
 	public String processRemoveItemForm(@RequestParam int[] itemsId) {
 		
 		for (int targetedId : itemsId) {
@@ -76,5 +76,5 @@ public class HelloController {
 		}
 		return "redirect:/";
 	}
-	
+	*/
 }

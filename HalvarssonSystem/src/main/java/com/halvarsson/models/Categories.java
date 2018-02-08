@@ -1,4 +1,4 @@
- package com.halvarsson.models;
+package com.halvarsson.models;
 
 import java.util.ArrayList;
 import java.util.List;

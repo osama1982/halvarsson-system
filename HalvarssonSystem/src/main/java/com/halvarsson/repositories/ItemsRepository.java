@@ -12,8 +12,8 @@ import com.halvarsson.models.Items;
 @Transactional
 public interface ItemsRepository extends CrudRepository<Items, Integer> {
 	
-/*	public List<Items> findAll();
+public List<Items> findAll();
 	
-	public Items findById(Integer id);*/
+	public Items findById(Integer id);
 	
 }
