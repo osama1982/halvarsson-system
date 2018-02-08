@@ -16,7 +16,7 @@ public class ItemsController {
 	@RequestMapping("/")
 	public String index(Model model) {
 		model.addAttribute("title", "Welcome to Halvarsson System");
-		model.addAttribute("menu", itemRepository.findAll());
+		//model.addAttribute("menu", itemRepository.findAll());
 		//model.addAttribute("menu", ItemsServices.getAllItems());
 		return "index";
 	}
